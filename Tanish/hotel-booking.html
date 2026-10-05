@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Accommodation — Kolkata Heritage Archive</title>
+  <meta name="description" content="Visitor accommodation information and institutional lodging requisition for travelers visiting Kolkata, West Bengal.">
+  <!-- Google Fonts: Cormorant Garamond & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       Header & Navigation
+       ========================================================================= -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand" aria-label="Kolkata Heritage Archive Home">
+        <img src="images/logo/logo.svg" alt="Kolkata Heritage Archive Logo" class="nav-logo">
+      </a>
+      <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav>
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="heritage.html" class="nav-link">Heritage</a></li>
+          <li class="nav-item"><a href="hotel-booking.html" class="nav-link active">Hotel Booking</a></li>
+          <li class="nav-item"><a href="gathering.html" class="nav-link">Gathering</a></li>
+          <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       Page Banner
+       ========================================================================= -->
+  <section class="page-banner">
+    <div class="container">
+      <nav class="breadcrumb-trail" aria-label="Breadcrumb">
+        <a href="index.html">HOME</a>
+        <span class="breadcrumb-separator">/</span>
+        <span>ACCOMMODATION</span>
+      </nav>
+      <h1 class="page-banner-title">HOTEL ACCOMMODATION</h1>
+      <p class="page-banner-desc">
+        Information for visitors planning a stay in Kolkata.
+      </p>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       Main Accommodation Requisition Layout
+       ========================================================================= -->
+  <main class="section-padding bg-paper">
+    <div class="container">
+      <div class="booking-editorial-layout">
+
+        <!-- Form Column (Two-Column Desktop: Left Guest info, Right Stay info inside form panel) -->
+        <div class="booking-form-panel">
+          <form id="hotelBookingForm" novalidate>
+
+            <!-- LEFT: Guest Information -->
+            <fieldset class="booking-fieldset">
+              <legend class="booking-legend">Guest Information</legend>
+
+              <div class="form-grid-2">
+                <!-- Full name -->
+                <div class="form-group">
+                  <label for="fullName" class="form-label">Full Name <span class="req">*</span></label>
+                  <input type="text" id="fullName" name="fullName" class="form-control" placeholder="e.g. Sourav Mukherjee" required>
+                  <div class="invalid-feedback">Please enter your legal name (minimum 3 characters).</div>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                  <label for="email" class="form-label">Email Address <span class="req">*</span></label>
+                  <input type="email" id="email" name="email" class="form-control" placeholder="e.g. sourav@example.com" required>
+                  <div class="invalid-feedback">Please provide a valid email address.</div>
+                </div>
+              </div>
+
+              <div class="form-grid-2">
+                <!-- Phone -->
+                <div class="form-group">
+                  <label for="phone" class="form-label">Phone / Mobile <span class="req">*</span></label>
+                  <input type="tel" id="phone" name="phone" class="form-control" placeholder="e.g. +91 98765 43210" required>
+                  <div class="invalid-feedback">Please enter a valid telephone number.</div>
+                </div>
+
+                <!-- Gender -->
+                <div class="form-group">
+                  <label class="form-label">Gender <span class="req">*</span></label>
+                  <div class="radio-options-row" style="padding-top: 6px;">
+                    <label class="radio-editorial-label">
+                      <input type="radio" name="gender" value="Male" checked> Male
+                    </label>
+                    <label class="radio-editorial-label">
+                      <input type="radio" name="gender" value="Female"> Female
+                    </label>
+                    <label class="radio-editorial-label">
+                      <input type="radio" name="gender" value="Other"> Other
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Address -->
+              <div class="form-group">
+                <label for="address" class="form-label">Residential Address <span class="req">*</span></label>
+                <textarea id="address" name="address" class="form-control" rows="2" placeholder="Street address, city, state, postal code" required></textarea>
+                <div class="invalid-feedback">Please provide your residential postal address.</div>
+              </div>
+
+              <!-- ID Proof -->
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label for="idProofType" class="form-label">Government ID Type <span class="req">*</span></label>
+                  <select id="idProofType" name="idProofType" class="form-control" required>
+                    <option value="Aadhaar Card" selected>Aadhaar Card (India)</option>
+                    <option value="Passport">International Passport</option>
+                    <option value="Voter ID">Voter Identity Card</option>
+                    <option value="Driving Licence">Driving Licence</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="idProofNum" class="form-label">ID Document Number <span class="req">*</span></label>
+                  <input type="text" id="idProofNum" name="idProofNum" class="form-control" placeholder="e.g. ABCD1234E" required>
+                  <div class="invalid-feedback">Please provide your government ID number.</div>
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- RIGHT: Stay Information -->
+            <fieldset class="booking-fieldset">
+              <legend class="booking-legend">Stay Information</legend>
+
+              <div class="form-grid-2">
+                <!-- Check-in -->
+                <div class="form-group">
+                  <label for="checkinDate" class="form-label">Check-in Date <span class="req">*</span></label>
+                  <input type="date" id="checkinDate" name="checkinDate" class="form-control" required>
+                  <div class="invalid-feedback">Select a valid check-in date.</div>
+                </div>
+
+                <!-- Check-out -->
+                <div class="form-group">
+                  <label for="checkoutDate" class="form-label">Check-out Date <span class="req">*</span></label>
+                  <input type="date" id="checkoutDate" name="checkoutDate" class="form-control" required>
+                  <div class="invalid-feedback">Check-out date must succeed check-in date.</div>
+                </div>
+              </div>
+
+              <div class="form-grid-3">
+                <!-- Room Type -->
+                <div class="form-group">
+                  <label for="roomType" class="form-label">Room Type <span class="req">*</span></label>
+                  <select id="roomType" name="roomType" class="form-control" required>
+                    <option value="deluxe" selected>Deluxe Heritage Suite (₹4,500 / night)</option>
+                    <option value="colonial">Grand Colonial Room (₹3,200 / night)</option>
+                    <option value="riverfront">Royal Hooghly Riverfront Room (₹5,800 / night)</option>
+                    <option value="executive">Executive Heritage Suite (₹7,500 / night)</option>
+                  </select>
+                </div>
+
+                <!-- Rooms Count -->
+                <div class="form-group">
+                  <label for="numRooms" class="form-label">Rooms <span class="req">*</span></label>
+                  <input type="number" id="numRooms" name="numRooms" class="form-control" min="1" max="5" value="1" required>
+                </div>
+
+                <!-- Guests Count -->
+                <div class="form-group">
+                  <label for="numGuests" class="form-label">Guests <span class="req">*</span></label>
+                  <input type="number" id="numGuests" name="numGuests" class="form-control" min="1" max="10" value="2" required>
+                </div>
+              </div>
+
+              <div class="form-grid-2">
+                <!-- Food Preference -->
+                <div class="form-group">
+                  <label for="foodPref" class="form-label">Food Preference</label>
+                  <select id="foodPref" name="foodPref" class="form-control">
+                    <option value="bengali">Traditional Bengali Cuisine &amp; Breakfast</option>
+                    <option value="veg">Vegetarian Provisions</option>
+                    <option value="vegan">Vegan Dietary Plan</option>
+                    <option value="continental">Continental &amp; European Breakfast</option>
+                    <option value="none">No Meal Plan Required</option>
+                  </select>
+                </div>
+
+                <!-- Payment Preference -->
+                <div class="form-group">
+                  <label for="paymentPref" class="form-label">Payment Preference</label>
+                  <select id="paymentPref" name="paymentPref" class="form-control">
+                    <option value="counter">Settlement at Check-in (Cash / UPI / Card)</option>
+                    <option value="upi">UPI Institutional Transfer</option>
+                    <option value="card">Credit / Debit Card</option>
+                    <option value="netbanking">Net Banking Remittance</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Special Requirements -->
+              <div class="form-group">
+                <label for="specialReq" class="form-label">Special Requirements</label>
+                <textarea id="specialReq" name="specialReq" class="form-control" rows="2" placeholder="Accessibility requests, quiet floor preference, early luggage drop, etc."></textarea>
+              </div>
+            </fieldset>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              SUBMIT ACCOMMODATION REQUISITION →
+            </button>
+          </form>
+        </div>
+
+        <!-- Live Tariff Estimator Card (Sticky Right Column) -->
+        <aside class="booking-estimator-card">
+          <h2 class="estimator-title">Tariff Estimator</h2>
+          <p class="estimator-subtitle">Live estimate including statutory GST</p>
+
+          <div class="estimator-rows">
+            <div class="estimator-row">
+              <span>Category Selected:</span>
+              <strong id="sumRoomName" style="color: var(--ink);">Deluxe Heritage Suite</strong>
+            </div>
+
+            <div class="estimator-row">
+              <span>Calculated Nights:</span>
+              <span id="sumNights">2 Nights</span>
+            </div>
+
+            <div class="estimator-row">
+              <span>Accommodations:</span>
+              <span id="sumRooms">1 Room</span>
+            </div>
+
+            <div class="estimator-row">
+              <span>Base Accommodation Tariff:</span>
+              <span id="sumRoomRate">₹9,000</span>
+            </div>
+
+            <div class="estimator-row">
+              <span>Statutory GST (12%):</span>
+              <span id="sumTaxes">₹1,080</span>
+            </div>
+
+            <div class="estimator-row total-row">
+              <span>Total Estimated Payable:</span>
+              <span class="estimator-val" id="sumTotal">₹10,080</span>
+            </div>
+          </div>
+
+          <div class="estimator-notes">
+            <strong>Institutional Booking Note:</strong>
+            Standard 24-hour notification cancellation policy applies. City walking maps and heritage directory guides are provided complimentary upon arrival.
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       Section 17: Archival Requisition Voucher Confirmation Modal
+       ========================================================================= -->
+  <div class="modal-overlay" id="bookingModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <div class="modal-badge-check">✓</div>
+      <h3 class="modal-title" id="modalTitle">Requisition Documented</h3>
+      <!-- EXACT REQUIRED SUBMISSION MESSAGE -->
+      <p class="modal-subtitle">Your booking request has been submitted.</p>
+
+      <div class="voucher-ticket">
+        <div class="voucher-ticket-header">
+          <span>Requisition Reference:</span>
+          <span class="voucher-ref-code" id="modalRef">KOL-BK-2026-7842</span>
+        </div>
+        <div class="voucher-row">
+          <span>Guest Name:</span>
+          <strong id="modalGuestName">Sourav Mukherjee</strong>
+        </div>
+        <div class="voucher-row">
+          <span>Period of Stay:</span>
+          <span id="modalDates">2026-10-01 to 2026-10-03</span>
+        </div>
+        <div class="voucher-row">
+          <span>Accommodation:</span>
+          <span id="modalRoom">1x Deluxe Heritage Suite</span>
+        </div>
+        <div class="voucher-row total-line">
+          <span>Estimated Total:</span>
+          <span id="modalTotal" style="color: var(--terracotta);">₹10,080</span>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 12px; justify-content: flex-end;">
+        <button type="button" class="btn btn-outline" id="printBookingBtn">PRINT VOUCHER</button>
+        <button type="button" class="btn btn-primary" id="closeModalBtn">DISMISS</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       Master Archival Editorial Footer
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-grid">
+        <div>
+          <h3 class="footer-logo-title">KOLKATA</h3>
+          <p class="footer-desc">
+            A digital cultural archive documenting the architectural heritage, literature, and living traditions of Kolkata, West Bengal.
+          </p>
+</div>
+
+        <div>
+          <h4 class="footer-heading">DIRECTORY</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="heritage.html">Heritage Archive</a></li>
+            <li><a href="hotel-booking.html">Hotel Accommodation</a></li>
+            <li><a href="gathering.html">Cultural Gatherings</a></li>
+            <li><a href="gallery.html">Visual Archive</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">MONOGRAPHS</h4>
+          <ul class="footer-links">
+            <li><a href="heritage/victoria-memorial.html">Victoria Memorial</a></li>
+            <li><a href="heritage/howrah-bridge.html">Howrah Bridge</a></li>
+            <li><a href="heritage/dakshineswar-temple.html">Dakshineswar Temple</a></li>
+            <li><a href="heritage/belur-math.html">Belur Math</a></li>
+            <li><a href="heritage/indian-museum.html">Indian Museum</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">INSTITUTIONAL RECORD</h4>
+          <div class="footer-contact-item">
+            <span>West Bengal Tourism Development Corporation (WBTDC), B.B.D. Bagh, Kolkata 700001</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>Archive Reference: WB/HER/KOL/2026/ACC</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-flex">
+        <p>&copy; 2026 Kolkata Heritage Archive.</p>
+        <div class="footer-bottom-links">
+          <a href="index.html">Index</a>
+          <a href="heritage.html">Heritage</a>
+          <a href="gallery.html">Plates</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
